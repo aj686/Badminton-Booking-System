@@ -1,0 +1,12 @@
+{
+    "name": "user/badminton-booking-system",
+    "authors": [
+        {
+            "name": "aj686",
+            "email": "ajwadaqhari1@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
