@@ -1,8 +1,13 @@
 <?php
 
-require_once __DIR__ . '/../../vendor/autoload.php'; // Adjust this path if necessary
+namespace Aj686\BadmintonBookingSystem\Services;
+
+require __DIR__ . '/../../vendor/autoload.php'; // Adjust this path if necessary
 
 use Dotenv\Dotenv;
+use PDO;
+use PDOException;
+
 
 class Database {
     private $db_connection;
@@ -16,15 +21,14 @@ class Database {
     public function getConnection() {
         $this->db_connection = null;
 
-        try {
+        try { 
             // Use environment variables from .env
             $host = $_ENV['DB_HOST'];
             $db_name = $_ENV['DB_NAME'];
             $username = $_ENV['DB_USER'];
             $password = $_ENV['DB_PASS'];
 
-            $this->db_connection = new PDO("
-                mysql:host=" . $host . ";dbname=" . $db_name, 
+            $this->db_connection = new PDO("mysql:host=" . $host . ";dbname=" . $db_name, 
                 $username, 
                 $password
             );
