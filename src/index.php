@@ -19,6 +19,8 @@
 
     // User
     Router::add('GET','/user/login', UserController::class, 'login');
+    Router::add('GET','/user/register', UserController::class, 'register');
+    Router::add('GET','/user/dashboard', UserController::class, 'dashboard');
 
     // Public
     Router::add('GET', '/homepage', HomeController::class, 'homepage');

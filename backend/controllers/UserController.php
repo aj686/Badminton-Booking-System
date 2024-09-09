@@ -13,7 +13,7 @@ class UserController {
         }
     }
     public function register() {
-        return 'User want to register';
+        return view('register');
     }
 
     public function login() {
@@ -21,6 +21,10 @@ class UserController {
     }
 
     public function logout() {}
+
+    public function dashboard() {
+        return view('dashboard');
+    }
 
     public function viewCourt() {}
 
